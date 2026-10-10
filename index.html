@@ -244,28 +244,8 @@ const AttendanceButton = {
     };
     return { soon, go };
   },
-  template: `<div><button class="btn" @click="go">💛 CONFIRMAR ASISTENCIA</button>
+  template: `<div><button class="btn" @click="go">💛 CONFIRMAR ASISTENCIA EN WHATSAPP</button>
     <p v-if="soon" class="note" role="status">La confirmación estará disponible próximamente.</p></div>`
-};
-
-const ShareInvitation = {
-  setup() {
-    const copied = ref(false), err = ref(false);
-    const done = () => { copied.value = true; fx('ding'); setTimeout(() => copied.value = false, 2500); };
-    const copy = async () => {
-      try { await navigator.clipboard.writeText(location.href); done(); } catch (e) { err.value = true; }
-    };
-    const share = async () => {
-      fx('click');
-      if (navigator.share) { try { await navigator.share({ title: 'Baby Shower de ' + CFG.baby, text: '¡Estás invitado a una obra llena de amor!', url: location.href }); fx('ding'); return; } catch (e) { if (e && e.name === 'AbortError') return; } }
-      copy();
-    };
-    return { copied, err, share, copy };
-  },
-  template: `<div><button class="btn" @click="share">📤 COMPARTIR INVITACIÓN</button>
-    <button class="btn" @click="copy" style="background:#fff">🔗 Copiar enlace</button>
-    <p v-if="copied" class="note" role="status">✅ ¡Enlace copiado!</p>
-    <p v-if="err" class="note" role="status">No se pudo copiar automáticamente. Copia la dirección desde el navegador.</p></div>`
 };
 
 const NameReveal = {
@@ -300,7 +280,7 @@ const NameReveal = {
 };
 
 const InvitationCard = {
-  components: { Sky, CountdownTimer, AttendanceButton, ShareInvitation },
+  components: { Sky, CountdownTimer, AttendanceButton },
   emits: ['again'],
   setup: () => ({ CFG }),
   template: `<main class="scene" style="justify-content:flex-start;padding-top:28px"><Sky/>
@@ -315,7 +295,7 @@ const InvitationCard = {
       <CountdownTimer/>
       <p style="text-align:center"><em>«Las grandes obras comienzan con pequeños sueños, y nuestro sueño más bonito está a punto de llegar».</em></p>
       <p class="t" style="font-size:1.1rem">¡Te esperamos para celebrar juntos esta hermosa aventura!</p>
-      <div style="text-align:center"><AttendanceButton/><ShareInvitation/></div>
+      <div style="text-align:center"><AttendanceButton/></div>
     </article>
     <button class="link" @click="fx('whoosh');$emit('again')">↺ Volver a ver la revelación</button></div></main>`,
   created() { this.fx = fx; }
