@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Baby Shower de Jorge Andrés Gómez Prieto</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--y:#FFC83D;--sky:#A9DDF7;--pb:#DDF2FF;--cream:#FFF8EB;--sand:#D9B88F;--br:#8A674B;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;font-family:Fredoka,"Trebuchet MS",system-ui,sans-serif;background:var(--pb);color:var(--br);overflow-x:hidden}
+.scene{min-height:100vh;min-height:100dvh;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px 16px 90px;text-align:center;background:linear-gradient(var(--sky),var(--pb) 70%,var(--cream))}
+.content{position:relative;z-index:3;max-width:620px;width:100%}
+h1,h2,h3{margin:.3em 0}h1{font-size:clamp(1.6rem,6vw,2.6rem)}h2{font-size:clamp(1.3rem,5vw,2rem)}
+.name{font-size:clamp(2rem,9vw,4rem);font-weight:700;line-height:1.05;color:var(--br);text-shadow:0 3px 0 var(--y)}
+.btn{font:inherit;font-weight:700;font-size:1.1rem;min-height:52px;padding:12px 26px;border:0;border-radius:999px;background:var(--y);color:var(--br);box-shadow:0 6px 0 var(--sand),0 10px 18px #8a674b33;cursor:pointer;margin:8px;transition:transform .15s}
+.btn:active{transform:translateY(4px);box-shadow:0 2px 0 var(--sand)}.btn:focus-visible,.fab:focus-visible,.link:focus-visible{outline:3px solid var(--br);outline-offset:3px}
+.btn.pulse{animation:pulse 1.6s infinite}@keyframes pulse{50%{transform:scale(1.06)}}
+.link{background:none;border:0;font:inherit;color:var(--br);text-decoration:underline;cursor:pointer;min-height:44px}
+.hint{font-size:.95rem;opacity:.85}
+.fence{display:inline-block;background:repeating-linear-gradient(-45deg,var(--y) 0 14px,#3a2a1c 14px 28px);padding:6px;border-radius:12px;margin:12px 0;box-shadow:0 5px 12px #0003}
+.fence span{display:block;background:var(--cream);padding:10px 16px;border-radius:8px;font-weight:700;font-size:.95rem}
+.ground{position:absolute;left:0;right:0;bottom:0;height:90px;background:var(--sand);border-top:8px solid #c4a07a;z-index:1}
+.road{position:absolute;left:0;right:0;bottom:30px;height:22px;background:#a98763;z-index:1}
+.cloud{position:absolute;width:120px;height:40px;background:#fff;border-radius:40px;opacity:.9;animation:drift linear infinite;z-index:0}
+.cloud:before,.cloud:after{content:"";position:absolute;background:#fff;border-radius:50%}.cloud:before{width:50px;height:50px;left:15px;top:-24px}.cloud:after{width:36px;height:36px;left:60px;top:-16px}
+@keyframes drift{from{transform:translateX(-160px)}to{transform:translateX(110vw)}}
+.truck{position:absolute;bottom:40px;left:-170px;width:145px;z-index:2}
+.truck.go{animation:drive 6s ease-in-out forwards}@keyframes drive{to{left:8%}}
+.truck.idle{animation:bob 2s ease-in-out infinite;left:4%}@keyframes bob{50%{transform:translateY(-4px)}}
+.wheel{animation:spin 1s linear infinite;transform-origin:center;transform-box:fill-box}@keyframes spin{to{transform:rotate(360deg)}}
+.dust{position:absolute;bottom:42px;width:16px;height:16px;border-radius:50%;background:#e8d3b4;opacity:0;animation:dust 1.6s ease-out infinite;z-index:2}
+@keyframes dust{0%{opacity:.8;transform:scale(.4)}100%{opacity:0;transform:translate(-30px,-30px) scale(1.6)}}
+.truck-right{position:absolute;right:6%;bottom:40px;width:100px;z-index:2;animation:bob-right 2.1s ease-in-out infinite;transform:scaleX(-1)}
+@keyframes bob-right{0%,100%{transform:scaleX(-1) translateY(0)}50%{transform:scaleX(-1) translateY(-4px)}}
+.cone{position:absolute;bottom:40px;width:34px;z-index:2}
+.msg{min-height:5.5em;font-size:clamp(1.1rem,4.5vw,1.5rem);font-weight:600;animation:in .8s both}
+@keyframes in{from{opacity:0;transform:translateY(12px)}}
+.star{position:absolute;color:#fff;animation:tw 2.5s ease-in-out infinite;z-index:0}@keyframes tw{50%{opacity:.3;transform:scale(.7)}}
+.conf{position:absolute;top:-20px;width:10px;height:14px;z-index:4;animation:fall linear forwards;pointer-events:none}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg)}}
+.balloon{position:absolute;bottom:-120px;z-index:2;animation:rise linear forwards}@keyframes rise{to{transform:translateY(-120vh)}}
+.gift{width:150px;margin:0 auto;position:relative;height:120px}
+.lid{transition:transform .8s cubic-bezier(.5,1.6,.5,1);transform-origin:left bottom}.open .lid{transform:translateY(-34px) rotate(-18deg)}
+.card{background:#fff;border:3px dashed var(--sky);border-radius:22px;padding:22px 18px;box-shadow:0 12px 30px #8a674b2b;text-align:left;animation:unroll 1s both;transform-origin:top}
+@keyframes unroll{from{opacity:0;transform:scaleY(.1)}}
+.card h3{color:var(--br);margin-top:1em;font-size:1rem;letter-spacing:.08em}.card p{margin:.2em 0 .6em;line-height:1.45}
+.card .big{font-size:1.15rem;font-weight:700}.card .t{text-align:center;font-size:1.4rem;font-weight:700}
+.cd{display:flex;gap:8px;justify-content:center;margin:10px 0}.cd div{background:var(--y);border-radius:14px;min-width:68px;padding:8px 4px;text-align:center}
+.cd b{display:block;font-size:1.6rem}.cd small{font-size:.75rem}
+.note{font-size:.85rem;opacity:.85;text-align:center}
+.fab{position:fixed;right:max(12px,env(safe-area-inset-right));bottom:max(12px,env(safe-area-inset-bottom));z-index:50;width:52px;height:52px;border-radius:50%;border:0;background:#fff;color:var(--br);box-shadow:0 4px 14px #0003;font-size:1.4rem;cursor:pointer}
+.panel{position:fixed;right:max(12px,env(safe-area-inset-right));bottom:calc(max(12px,env(safe-area-inset-bottom)) + 62px);z-index:50;background:#fff;border-radius:18px;padding:12px 14px;box-shadow:0 8px 24px #0003;text-align:left;font-size:.95rem}
+.panel label{display:flex;gap:8px;align-items:center;min-height:36px}.panel input[type=checkbox]{width:20px;height:20px}
+.fade-enter-active,.fade-leave-active{transition:opacity .6s}.fade-enter-from,.fade-leave-to{opacity:0}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script src="https://cdn.jsdelivr.net/npm/vue@3.4.38/dist/vue.global.prod.js"></script>
+<script>
+const { createApp, ref, reactive, computed, onMounted, onUnmounted } = Vue;
+
+/* ===== config/invitation.js (datos editables) ===== */
+const CFG = {
+  baby: 'Jorge Andrés Gómez Prieto',
+  dateText: 'Domingo, 15 de noviembre de 2026',
+  date: '2026-11-15',
+  time: '00:00',          // hora del evento: EDITAR cuando se confirme (HH:MM, hora de Colombia)
+  timeConfirmed: false,
+  address: 'Carrera 14 # 16-83, casa de mis nonitos',
+  whatsapp: ''            // EDITAR: número con indicativo, solo dígitos. Ej: 573001234567
+};
+
+/* ===== useAudio.js: música y efectos con Web Audio API (sin archivos externos) ===== */
+const A = reactive({ music: true, fx: true, all: true, playing: false, mv: 0.18, fv: 0.5 });
+let ctx = null, master, mG, fG, timer = null, nextT = 0, stp = 0, lastFx = 0;
+const MEL = [523,659,784,659,587,659,523,0,392,523,587,659,784,659,587,0], BASS = [262,196,220,175];
+function init() {
+  if (ctx) { if (ctx.state === 'suspended') ctx.resume().catch(()=>{}); return true; }
+  try {
+    ctx = new (window.AudioContext || window.webkitAudioContext)();
+    master = ctx.createGain(); master.connect(ctx.destination);
+    mG = ctx.createGain(); mG.gain.value = 0; mG.connect(master);
+    fG = ctx.createGain(); fG.gain.value = A.fv; fG.connect(master);
+    return true;
+  } catch (e) { ctx = null; return false; }
+}
+function tone(f, t, d, v, dest, type = 'sine') {
+  const o = ctx.createOscillator(), g = ctx.createGain();
+  o.type = type; o.frequency.value = f;
+  g.gain.setValueAtTime(0.0001, t); g.gain.linearRampToValueAtTime(v, t + 0.012);
+  g.gain.exponentialRampToValueAtTime(0.0001, t + d);
+  o.connect(g); g.connect(dest); o.start(t); o.stop(t + d + 0.05);
+}
+function sched() {
+  if (!ctx) return;
+  while (nextT < ctx.currentTime + 0.6) {
+    const n = MEL[stp % MEL.length];
+    if (n) { tone(n, nextT, 1, 0.5, mG); tone(n * 2, nextT, 0.35, 0.08, mG); }
+    if (stp % 4 === 0) tone(BASS[(stp / 4) % 4 | 0], nextT, 1.8, 0.35, mG, 'triangle');
+    nextT += 0.5; stp++;
+  }
+}
+function ramp(target, s = 1.5) {
+  if (!ctx) return; const t = ctx.currentTime;
+  mG.gain.cancelScheduledValues(t); mG.gain.setValueAtTime(mG.gain.value, t); mG.gain.linearRampToValueAtTime(target, t + s);
+}
+const musicOn = () => A.music && A.all;
+function startMusic() {
+  if (!musicOn() || !init()) return;
+  if (!timer) { nextT = ctx.currentTime + 0.1; timer = setInterval(sched, 200); }
+  A.playing = true; ramp(A.mv, 2.5);
+}
+function stopMusic() {
+  A.playing = false; ramp(0, 1);
+  setTimeout(() => { if (!A.playing && timer) { clearInterval(timer); timer = null; } }, 1200);
+}
+function toggleMusic() { A.music = !A.music; A.music && A.all ? startMusic() : stopMusic(); }
+function toggleFx() { A.fx = !A.fx; }
+function toggleAll() { A.all = !A.all; A.all ? (A.music && startMusic()) : stopMusic(); }
+function setMusicVolume(v) { A.mv = v; if (A.playing) ramp(v, .3); }
+function setEffectsVolume(v) { A.fv = v; if (fG) fG.gain.value = v; }
+function duck(on) { if (A.playing) ramp(on ? A.mv * 0.35 : A.mv, on ? 1 : 3); }
+function noise(t, d, v, freq) {
+  const n = ctx.sampleRate * d, b = ctx.createBuffer(1, n, ctx.sampleRate), c = b.getChannelData(0);
+  for (let i = 0; i < n; i++) c[i] = Math.random() * 2 - 1;
+  const s = ctx.createBufferSource(), f = ctx.createBiquadFilter(), g = ctx.createGain();
+  s.buffer = b; f.type = 'bandpass'; f.frequency.value = freq;
+  g.gain.setValueAtTime(0.0001, t); g.gain.linearRampToValueAtTime(v, t + d * .3); g.gain.exponentialRampToValueAtTime(0.0001, t + d);
+  s.connect(f); f.connect(g); g.connect(fG); s.start(t);
+}
+function playButtonSound(type = 'click') {
+  if (!A.fx || !A.all || !init()) return;
+  const now = performance.now(); if (now - lastFx < 120) return; lastFx = now;
+  try {
+    const t = ctx.currentTime + 0.01, bell = (f, o, d = .35, v = .35) => tone(f, t + o, d, v, fG);
+    switch (type) {
+      case 'magic': [784, 988, 1175, 1568].forEach((f, i) => bell(f, i * .09)); break;
+      case 'whoosh': noise(t, .45, .25, 900); break;
+      case 'drum': for (let i = 0; i < 6; i++) tone(110, t + i * .13, .12, .25 + i * .03, fG, 'triangle'); break;
+      case 'celebrate': [659, 784, 988, 1175, 1319, 1568].forEach((f, i) => bell(f, i * .1, .6, .3)); bell(523, 0, .8, .25); break;
+      case 'click': bell(880, 0, .12, .3); bell(1175, .06, .15, .25); break;
+      case 'ding': bell(1047, 0, .5, .3); break;
+      case 'tiny': bell(740, 0, .1, .2); break;
+      case 'motor': tone(90, t, .6, .12, fG, 'triangle'); tone(96, t + .02, .6, .08, fG, 'triangle'); break;
+      case 'sand': noise(t, .6, .12, 2500); break;
+    }
+  } catch (e) {}
+}
+const fx = playButtonSound;
+
+/* ===== Componentes ===== */
+const Sky = { template: `<div aria-hidden="true">
+  <span class="cloud" style="top:8%;animation-duration:60s"></span><span class="cloud" style="top:20%;animation-duration:85s;animation-delay:-30s;transform:scale(.7)"></span>
+  <span class="cloud" style="top:34%;animation-duration:70s;animation-delay:-50s;transform:scale(.5)"></span>
+  <span class="star" style="top:12%;left:15%">✦</span><span class="star" style="top:26%;left:80%;animation-delay:.8s">★</span><span class="star" style="top:40%;left:6%;animation-delay:1.4s">✦</span><span class="star" style="top:6%;left:60%;animation-delay:.4s">♥</span></div>` };
+
+const TruckPurple = { template: `<svg viewBox="0 0 150 80" role="img" aria-label="Volqueta cabina blanca y plato morado">
+  <path d="M8 18h72l-8 34H8z" fill="#9B51E0" stroke="#5B2C6F" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M14 24h56l-5 22H14z" fill="#884EA0" opacity="0.3"/>
+  <path d="M82 28h28l18 16v14H82z" fill="#FFFFFF" stroke="#5B2C6F" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M92 34h16l10 9H92z" fill="#DDF2FF" stroke="#5B2C6F" stroke-width="2"/>
+  <circle cx="123" cy="53" r="3.5" fill="#FFEB3B" stroke="#5B2C6F" stroke-width="1.5"/>
+  <rect x="4" y="52" width="130" height="8" rx="4" fill="#4A235A"/>
+  <g class="wheel"><circle cx="32" cy="62" r="13" fill="#3E2723"/><circle cx="32" cy="62" r="5" fill="#9B51E0"/><path d="M32 52v20M22 62h20" stroke="#9B51E0" stroke-width="2"/></g>
+  <g class="wheel"><circle cx="106" cy="62" r="13" fill="#3E2723"/><circle cx="106" cy="62" r="5" fill="#FFFFFF"/><path d="M106 52v20M96 62h20" stroke="#9B51E0" stroke-width="2"/></g>
+</svg>` };
+
+const TruckGreen = { template: `<svg viewBox="0 0 150 80" role="img" aria-label="Volqueta pequeña verde completamente">
+  <path d="M8 18h72l-8 34H8z" fill="#43A047" stroke="#1B5E20" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M14 24h56l-5 22H14z" fill="#2E7D32" opacity="0.3"/>
+  <path d="M82 28h28l18 16v14H82z" fill="#4CAF50" stroke="#1B5E20" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M92 34h16l10 9H92z" fill="#E8F8F5" stroke="#1B5E20" stroke-width="2"/>
+  <circle cx="123" cy="53" r="3.5" fill="#FFEB3B" stroke="#1B5E20" stroke-width="1.5"/>
+  <rect x="4" y="52" width="130" height="8" rx="4" fill="#1B5E20"/>
+  <g class="wheel"><circle cx="32" cy="62" r="13" fill="#263238"/><circle cx="32" cy="62" r="5" fill="#66BB6A"/><path d="M32 52v20M22 62h20" stroke="#A5D6A7" stroke-width="2"/></g>
+  <g class="wheel"><circle cx="106" cy="62" r="13" fill="#263238"/><circle cx="106" cy="62" r="5" fill="#66BB6A"/><path d="M106 52v20M96 62h20" stroke="#A5D6A7" stroke-width="2"/></g>
+</svg>` };
+
+const Cone = { template: `<svg class="cone" viewBox="0 0 40 50" aria-hidden="true"><path d="M20 2l14 40H6z" fill="#FF9D3D" stroke="#8A674B" stroke-width="2"/><path d="M14 22h12l2 8H12z" fill="#fff"/><rect x="2" y="42" width="36" height="6" rx="2" fill="#8A674B"/></svg>` };
+
+const Box = { props: ['covered'], template: `<svg viewBox="0 0 120 110" width="120" aria-label="Caja misteriosa">
+  <rect x="14" y="40" width="92" height="62" rx="8" fill="#FFC83D" stroke="#8A674B" stroke-width="3"/>
+  <path d="M60 40v62M14 70h92" stroke="#fff" stroke-width="6"/><path d="M60 40c-18-22-34-4-6 0M60 40c18-22 34-4 6 0" fill="none" stroke="#8A674B" stroke-width="3"/>
+  <path v-if="covered" d="M6 104C6 40 30 20 60 20s54 20 54 84z" fill="#A9DDF7" stroke="#8A674B" stroke-width="3"/>
+  <text v-if="covered" x="60" y="72" text-anchor="middle" font-size="34" font-weight="700" fill="#8A674B">?</text></svg>` };
+
+const WelcomeScene = {
+  components: { Sky, TruckPurple, TruckGreen, Cone },
+  emits: ['start'],
+  template: `<main class="scene"><Sky/>
+  <div class="content">
+    <h1>¡ATENCIÓN, FAMILIA Y AMIGOS!</h1>
+    <p>Tenemos una misión muy especial y necesitamos que nos acompañen a descubrir una gran sorpresa.</p>
+    <div class="fence"><span>OBRA EN PROCESO: UN GRAN AMOR VIENE EN CAMINO</span></div><br>
+    <button class="btn pulse" @click="$emit('start')">🚧 COMENZAR LA AVENTURA</button>
+    <p class="hint">🎵 Activa el sonido para disfrutar esta aventura (se activa con este botón; puedes silenciarlo cuando quieras)</p>
+  </div>
+  <div class="road"></div><div class="ground"></div>
+  <TruckPurple class="truck idle"/><TruckGreen class="truck-right"/><Cone style="left:46%"/><Cone style="left:52%"/>
+  </main>`
+};
+
+const SuspenseScene = {
+  components: { Sky, TruckPurple, TruckGreen, Cone, Box },
+  emits: ['reveal'],
+  setup() {
+    const i = ref(0), msgs = ['En esta obra hemos puesto todo nuestro amor…', 'Durante meses hemos preparado el proyecto más importante de nuestras vidas…', 'Y hoy queremos compartir esta felicidad con las personas que más queremos.'];
+    let tm; onMounted(() => {
+      fx('motor');
+      tm = setInterval(() => { if (i.value < 4) { i.value++; if (i.value === 1) fx('sand'); if (i.value === 3) fx('ding'); } else clearInterval(tm); }, 4200);
+    });
+    onUnmounted(() => clearInterval(tm));
+    const go = () => { fx('drum'); setTimeout(() => {}, 0); };
+    return { i, msgs, go };
+  },
+  template: `<main class="scene"><Sky/>
+  <div class="content">
+    <p v-if="i<3" class="msg" :key="i" aria-live="polite">{{ msgs[i] }}</p>
+    <div v-else :key="'q'" class="msg" style="animation:in .8s both"><h2>¿ESTÁN LISTOS PARA DESCUBRIR QUIÉN ESTÁ POR LLEGAR?</h2></div>
+    <div v-if="i>=2" style="animation:in .8s both"><Box :covered="true"/></div>
+    <button v-if="i>=3" class="btn pulse" @click="go();$emit('reveal')">¡REVELAR LA GRAN SORPRESA!</button>
+  </div>
+  <div class="road"></div><div class="ground"></div>
+  <span class="dust" style="left:8%;animation-delay:.2s"></span><span class="dust" style="left:12%;animation-delay:.8s"></span>
+  <TruckPurple class="truck go"/><TruckGreen class="truck-right"/><Cone style="left:44%"/>
+  </main>`
+};
+
+const CountdownTimer = {
+  setup() {
+    const target = new Date(CFG.date + 'T' + CFG.time + ':00-05:00').getTime();
+    const left = ref(target - Date.now()); let id;
+    onMounted(() => { id = setInterval(() => { left.value = target - Date.now(); }, 1000); });
+    onUnmounted(() => clearInterval(id));
+    const p = computed(() => { const s = Math.max(0, Math.floor(left.value / 1000)); return [['Días', Math.floor(s / 86400)], ['Horas', Math.floor(s % 86400 / 3600)], ['Min', Math.floor(s % 3600 / 60)], ['Seg', s % 60]]; });
+    return { left, p, CFG };
+  },
+  template: `<section aria-label="Cuenta regresiva">
+    <p v-if="left<=0" class="t">🎉 ¡La obra más bonita ya comenzó! 🎉</p>
+    <div v-else class="cd" role="timer"><div v-for="x in p" :key="x[0]"><b>{{ String(x[1]).padStart(2,'0') }}</b><small>{{ x[0] }}</small></div></div>
+    <p v-if="!CFG.timeConfirmed" class="note">Hora por confirmar. La cuenta regresiva va hasta el inicio de ese día.</p></section>`
+};
+
+const AttendanceButton = {
+  setup() {
+    const soon = ref(false);
+    const go = () => {
+      fx('click');
+      if (!CFG.whatsapp) { soon.value = true; return; }
+      const msg = '¡Hola! Confirmo mi asistencia al baby shower de ' + CFG.baby + ', el domingo 15 de noviembre de 2026. ¡Muchas gracias por la invitación!';
+      window.open('https://wa.me/' + CFG.whatsapp + '?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+    };
+    return { soon, go };
+  },
+  template: `<div><button class="btn" @click="go">💛 CONFIRMAR ASISTENCIA EN WHATSAPP</button>
+    <p v-if="soon" class="note" role="status">La confirmación estará disponible próximamente.</p></div>`
+};
+
+const NameReveal = {
+  components: { Sky, TruckPurple, TruckGreen },
+  emits: ['next'],
+  setup() {
+    const open = ref(false), conf = ref([]), balls = ref([]), cols = ['#FFC83D', '#A9DDF7', '#fff', '#8A674B', '#4FB3E8'];
+    const mk = () => {
+      conf.value = Array.from({ length: 50 }, (_, i) => ({ l: Math.random() * 100, d: Math.random() * 2, t: 3 + Math.random() * 3, c: cols[i % 5], s: i % 3 ? '2px' : '50%' }));
+      balls.value = Array.from({ length: 8 }, (_, i) => ({ l: 5 + i * 12, d: Math.random() * 2, t: 7 + Math.random() * 4, c: i % 2 ? '#4FB3E8' : '#FFC83D' }));
+    };
+    let t1; onMounted(() => {
+      duck(true); fx('drum');
+      t1 = setTimeout(() => { open.value = true; mk(); fx('celebrate'); setTimeout(() => duck(false), 4000); }, 1400);
+    });
+    onUnmounted(() => { clearTimeout(t1); duck(false); });
+    return { open, conf, balls };
+  },
+  template: `<main class="scene" :class="{open}"><Sky/>
+    <span v-for="(c,i) in conf" :key="'c'+i" class="conf" aria-hidden="true" :style="{left:c.l+'%',animationDelay:c.d+'s',animationDuration:c.t+'s',background:c.c,borderRadius:c.s}"></span>
+    <svg v-for="(b,i) in balls" :key="'b'+i" class="balloon" aria-hidden="true" width="46" viewBox="0 0 46 80" :style="{left:b.l+'%',animationDelay:b.d+'s',animationDuration:b.t+'s'}"><ellipse cx="23" cy="26" rx="20" ry="24" :fill="b.c"/><path d="M23 50v28" stroke="#8A674B" stroke-width="2"/></svg>
+    <div class="content">
+      <div class="gift" aria-hidden="true"><svg viewBox="0 0 150 120" width="150"><rect x="15" y="50" width="120" height="66" rx="8" fill="#FFC83D" stroke="#8A674B" stroke-width="3"/><path d="M75 50v66" stroke="#fff" stroke-width="8"/><g class="lid"><rect x="8" y="30" width="134" height="26" rx="8" fill="#A9DDF7" stroke="#8A674B" stroke-width="3"/><path d="M75 30v26" stroke="#fff" stroke-width="8"/></g></svg></div>
+      <p v-if="!open" class="msg" aria-live="polite">¡Las volquetas están listas para descargar la sorpresa! 🚚💨</p>
+      <template v-else><div style="animation:in 1s both">
+        <h2>¡LA OBRA MÁS HERMOSA DE NUESTRAS VIDAS YA TIENE NOMBRE!</h2>
+        <p class="name" aria-live="assertive">JORGE ANDRÉS GÓMEZ PRIETO</p>
+        <p style="font-size:1.2rem">💛 Un pequeño gran amor viene en camino 💙</p>
+        <button class="btn pulse" @click="$emit('next')">Ver la invitación 📜</button></div></template>
+    </div>
+    <div class="road"></div><div class="ground"></div><TruckPurple class="truck idle" style="left:4%"/><TruckGreen class="truck-right"/></main>`
+};
+
+const InvitationCard = {
+  components: { Sky, CountdownTimer, AttendanceButton },
+  emits: ['again'],
+  setup: () => ({ CFG }),
+  template: `<main class="scene" style="justify-content:flex-start;padding-top:28px"><Sky/>
+    <div class="content"><article class="card">
+      <h2 class="t">¡ESTÁS INVITADO A UNA OBRA LLENA DE AMOR!</h2>
+      <p>Con mucha alegría queremos invitar a nuestros familiares y amigos, tanto de la familia de mamá como de la familia de papá, a celebrar la llegada de nuestro pequeño conductor.</p>
+      <p>Queremos compartir contigo este momento tan especial, rodeados de amor, alegría y muchas bendiciones para nuestro bebé.</p>
+      <h3>NUESTRO PEQUEÑO PROTAGONISTA</h3><p class="big">{{ CFG.baby }}.</p>
+      <h3>FECHA</h3><p class="big">{{ CFG.dateText }}.</p>
+      <h3>LUGAR</h3><p class="big">{{ CFG.address }}.</p>
+      <h3>CELEBRACIÓN</h3><p class="big">Baby shower de nuestro pequeño conductor.</p>
+      <CountdownTimer/>
+      <p style="text-align:center"><em>«Las grandes obras comienzan con pequeños sueños, y nuestro sueño más bonito está a punto de llegar».</em></p>
+      <p class="t" style="font-size:1.1rem">¡Te esperamos para celebrar juntos esta hermosa aventura!</p>
+      <div style="text-align:center"><AttendanceButton/></div>
+    </article>
+    <button class="link" @click="fx('whoosh');$emit('again')">↺ Volver a ver la revelación</button></div></main>`,
+  created() { this.fx = fx; }
+};
+
+const AudioController = {
+  setup() {
+    const open = ref(false);
+    const tap = (f) => { fx('tiny'); f(); };
+    return { A, open, tap, toggleMusic, toggleFx, toggleAll, setMusicVolume, setEffectsVolume };
+  },
+  template: `<div>
+    <div v-if="open" class="panel" role="group" aria-label="Controles de audio">
+      <label><input type="checkbox" :checked="A.all" @change="toggleAll"> Todo el sonido</label>
+      <label><input type="checkbox" :checked="A.music" :disabled="!A.all" @change="toggleMusic"> Música ambiental</label>
+      <label><input type="checkbox" :checked="A.fx" :disabled="!A.all" @change="toggleFx"> Efectos de botones</label>
+    </div>
+    <button class="fab" :aria-label="A.playing?'Silenciar música':'Activar música'" :aria-pressed="A.playing"
+      @click="A.playing||!A.all||!A.music ? (A.music&&A.all ? tap(toggleMusic) : tap(toggleMusic)) : tap(toggleMusic)"
+      @contextmenu.prevent="open=!open">{{ A.playing ? '🔊' : '🔇' }}</button>
+    <button class="fab" style="right:calc(max(12px,env(safe-area-inset-right)) + 60px);font-size:1.1rem" aria-label="Ajustes de audio" :aria-expanded="open" @click="open=!open">⚙️</button>
+  </div>`
+};
+
+const App = {
+  components: { WelcomeScene, SuspenseScene, NameReveal, InvitationCard, AudioController },
+  setup() {
+    const scene = ref('welcome'), seen = ref(false);
+    const start = () => { init(); fx('magic'); startMusic(); scene.value = 'suspense'; };
+    const reveal = () => { scene.value = 'reveal'; seen.value = true; };
+    const next = () => { fx('whoosh'); scene.value = 'invitation'; };
+    const again = () => { scene.value = 'reveal'; };
+    return { scene, start, reveal, next, again };
+  },
+  template: `<div>
+    <Transition name="fade" mode="out-in">
+      <WelcomeScene v-if="scene==='welcome'" key="w" @start="start"/>
+      <SuspenseScene v-else-if="scene==='suspense'" key="s" @reveal="reveal"/>
+      <NameReveal v-else-if="scene==='reveal'" key="r" @next="next"/>
+      <InvitationCard v-else key="i" @again="again"/>
+    </Transition>
+    <AudioController/></div>`
+};
+createApp(App).mount('#app');
+</script>
+</body>
+</html>
