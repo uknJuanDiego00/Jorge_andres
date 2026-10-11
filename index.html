@@ -241,7 +241,7 @@ const CountdownTimer = {
   template: `<section aria-label="Cuenta regresiva">
     <p v-if="left<=0" class="t">🎉 ¡La obra más bonita ya comenzó! 🎉</p>
     <div v-else class="cd" role="timer"><div v-for="x in p" :key="x[0]"><b>{{ String(x[1]).padStart(2,'0') }}</b><small>{{ x[0] }}</small></div></div>
-    <p v-if="!CFG.timeConfirmed" class="note">Hora por confirmar. La cuenta regresiva va hasta el inicio de ese día.</p></section>`
+    <p v-if="!CFG.timeConfirmed" class="note">3:00 P.M. La cuenta regresiva va hasta el inicio de ese día.</p></section>`
 };
 
 const AttendanceButton = {
